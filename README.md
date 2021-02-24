@@ -26,7 +26,7 @@ To install necessary dependencies run the following command:
 
 App is deployed to a Github URL for user experience. Click the screenshot to demo the app.
 
-> <img src="./assets/app-screenshot.jpg" width="550"></img>
+> <a href= "https://kcraymond.github.io/Weather-Dashboard/"> <img src="./assets/app-screenshot.jpg" width="550"></a>
 
 ## Contributing Information:
 

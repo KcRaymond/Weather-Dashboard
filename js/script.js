@@ -64,3 +64,28 @@ function getWeather(city) {
     },
   });
 }
+
+// UV Index API Call
+function getUV(lat, lon) {
+  $("span").empty();
+  $.ajax({
+    type: "GET",
+    url:
+      "https://api.openweathermap.org/data/2.5/uvi?lat=" +
+      lat +
+      "&lon=" +
+      lon +
+      "&APPID=1e3ad008e239358d0ab3741145b4b149",
+    success: function (uvJSON) {
+      $("#uv-index").append("<b>UV Index:</b>");
+      $("#uv-number").append(" " + uvJSON.value);
+      if (uvJSON.value >= 0 && uvJSON.value <= 2) {
+        $("#uv-number").attr("style", "background-color:green; color: white");
+      } else if (uvJSON.value >= 2 && uvJSON.value <= 5) {
+        $("#uv-number").attr("style", "background-color:#ff8c00; color: white");
+      } else {
+        $("#uv-number").attr("style", "background-color:red; color: white");
+      }
+    },
+  });
+}

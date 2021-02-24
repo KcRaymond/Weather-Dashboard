@@ -4,7 +4,7 @@ body {
 }
 
 .header {
-  background-image: linear-gradient(yellow, orange, rgb(9, 171, 224));
+  background-image: linear-gradient(rgb(9, 171, 224), rgb(77, 3, 77));
   text-align: center;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -19,18 +19,24 @@ h1 {
 }
 
 h2 {
-  color: #383d45;
+  color: white;
   font-size: 24px;
+  text-shadow: 2px 2px 2px black;
 }
 
 h3 {
-  color: #383d45;
+  color: white;
   font-size: 24px;
+  text-shadow: 2px 2px 2px black;
 }
 
 h4 {
-  color: #383d45;
+  color: white;
   font-size: 24px;
+}
+p,
+#uv-index {
+  color: white;
 }
 
 main {
@@ -40,7 +46,7 @@ main {
 }
 
 button {
-  background-color: #287bff;
+  background-color: rgb(9, 171, 224);
   border: none;
   color: white;
   width: 40px;
@@ -54,17 +60,21 @@ button {
 
 form {
   margin-top: 20px;
+  border-radius: 5px;
 }
 
 aside {
-  color: #383d45;
   padding: 20px;
-  background-color: rgb(245, 245, 245);
+  background-image: linear-gradient(grey, black);
+  opacity: 75%;
+  border-radius: 15px;
 }
 
 section {
-  background-color: rgb(245, 245, 245);
-  color: #383d45;
+  background-image: linear-gradient(grey, black);
+  opacity: 80%;
+  border-radius: 15px;
+  margin-left: 15px;
 }
 
 #five-section {
@@ -74,7 +84,7 @@ section {
 #five-forecast {
   margin-top: 15px;
   margin-bottom: 20px;
-  background-color: #287bff;
+  background-color: rgb(9, 171, 224);
   color: white;
 }
 
@@ -86,6 +96,7 @@ section {
 .card weather-card {
   text-align: center;
   padding-top: 10px;
+  border-radius: 15px;
 }
 
 #forecast1,
@@ -98,6 +109,6 @@ section {
 }
 
 img {
-  height: 60px;
-  width: 60px;
+  height: 70px;
+  width: 70px;
 }

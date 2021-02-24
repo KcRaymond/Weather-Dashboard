@@ -89,3 +89,38 @@ function getUV(lat, lon) {
     },
   });
 }
+
+// 5-Day Forecast API Call
+function getFiveDay(lat, lon) {
+  $("#forecast1").empty();
+  $("#forecast2").empty();
+  $("#forecast3").empty();
+  $("#forecast4").empty();
+  $("#forecast5").empty();
+  $.ajax({
+    type: "GET",
+    url:
+      "https://api.openweathermap.org/data/2.5/onecall?lat=" +
+      lat +
+      "&lon=" +
+      lon +
+      "&exclude=minutely,current,hourly,alerts&units=imperial&appid=1e3ad008e239358d0ab3741145b4b149",
+    success: function (fiveJSON) {
+      for (var i = 0; i < 6; i++) {
+        var getFiveDayIcon = fiveJSON.daily[i].weather[0].icon;
+        fiveDayIcon =
+          "https://openweathermap.org/img/wn/" + getFiveDayIcon + "@2x.png";
+        var time = fiveJSON.daily[i].dt;
+        var newTime = moment.unix(time).format("MM/DD/YYYY");
+        $("#forecast" + [i]).append(newTime);
+        $("#forecast" + [i]).append("<img src=" + fiveDayIcon + ">");
+        $("#forecast" + [i]).append(
+          "Temp: " + fiveJSON.daily[i].temp.day + " &deg;F" + "<br>"
+        );
+        $("#forecast" + [i]).append(
+          "Humidity: " + fiveJSON.daily[i].humidity + "%"
+        );
+      }
+    },
+  });
+}

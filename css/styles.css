@@ -66,8 +66,12 @@ form {
 aside {
   padding: 20px;
   background-image: linear-gradient(grey, black);
+  background-image: url(../assets/cities-skylines.png);
+  background-repeat: no-repeat;
+  background-position: 0px;
   opacity: 75%;
   border-radius: 15px;
+  padding
 }
 
 section {

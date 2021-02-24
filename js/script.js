@@ -124,3 +124,42 @@ function getFiveDay(lat, lon) {
     },
   });
 }
+
+//Shows search history list group on refresh or is empty on first visit
+function showHistory() {
+  var historyItem = JSON.parse(localStorage.getItem("userInput"));
+  historyEl.innerHTML = "";
+  if (historyItem !== null) {
+    for (i = 0; i < historyItem.length; i++) {
+      var searchItem = document.createElement("input");
+      searchItem.setAttribute("type", " text");
+      searchItem.setAttribute("readonly", "true");
+      searchItem.setAttribute("class", "form-control d-block bg-white");
+      searchItem.setAttribute("value", historyItem[i]);
+      searchItem.addEventListener("click", function () {
+        getWeather(searchItem.value);
+      });
+      historyEl.append(searchItem);
+    }
+  }
+}
+
+showHistory();
+
+//Shows search history list group as the user searches for cities
+function newHistory() {
+  var historyItem = JSON.parse(
+    localStorage.getItem(localStorage.key("userInput"))
+  );
+  if (historyItem !== null) {
+    var searchItem = document.createElement("input");
+    searchItem.setAttribute("type", " text");
+    searchItem.setAttribute("readonly", "true");
+    searchItem.setAttribute("class", "form-control d-block bg-white");
+    searchItem.setAttribute("value", historyItem[historyItem.length - 1]);
+    searchItem.addEventListener("click", function () {
+      getWeather(searchItem.value);
+    });
+    historyEl.append(searchItem);
+  }
+}

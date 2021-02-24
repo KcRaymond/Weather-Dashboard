@@ -1,0 +1,98 @@
+body {
+  font-family: sans-serif;
+}
+
+.header {
+  background-color: #383d45;
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  color: #383d45;
+  font-size: 24px;
+}
+
+h3 {
+  color: #383d45;
+  font-size: 24px;
+}
+
+h4 {
+  color: #383d45;
+  font-size: 24px;
+}
+
+main {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+}
+
+button {
+  background-color: #287bff;
+  border: none;
+  color: white;
+  width: 40px;
+  background-image: url(../assets/images/search-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px;
+  border-radius: 5px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+aside {
+  color: #383d45;
+  padding: 20px;
+  background-color: rgb(245, 245, 245);
+}
+
+section {
+  background-color: rgb(245, 245, 245);
+  color: #383d45;
+}
+
+#five-section {
+  margin-top: 30px;
+}
+
+#five-forecast {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  background-color: #287bff;
+  color: white;
+}
+
+#uv-number {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.card weather-card {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#forecast1,
+#forecast2,
+#forecast3,
+#forecast4 {
+  border-bottom: solid 2px rgb(230, 230, 230);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+img {
+  height: 60px;
+  width: 60px;
+}

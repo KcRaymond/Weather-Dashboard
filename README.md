@@ -4,7 +4,7 @@
 
 ## Description:
 
-This application builds a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS styling that is applied to the info generated from the OpenWeather API. Using API calls you can search for a certain city and display the current weather, UV Index and the next 5 day forcast. Searches are saved in local storage for a sort term experience. Could be improved on by using a database for long term storage.
+This application builds a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS styling that is applied to the info generated from the OpenWeather API. Using API calls you can search for a certain city and display the current weather, UV Index and the next 5 day forecast. Searches are saved in local storage for a sort term experience. Could be improved on by using a database for long term storage.
 
 ---
 
